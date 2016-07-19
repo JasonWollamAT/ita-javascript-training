@@ -7,11 +7,17 @@ var data = {};
 var rl = require('readline').createInterface(process.stdin, process.stdout);
 var prompts = ['Number1', 'Operation', 'Number2']
 
+/********************************** Boilerplate *********************************/
+
+var parseInput = function(data){
+    if(data.Operation === '+') {
+        return addNumbers(data);
+    }
+}
+
 
 var addNumbers = function(data){
-    if(data.Operation === '+'){
-        return (parseInt(data.Number1) + parseInt(data.Number2))
-    }
+    return (parseInt(data.Number1) + parseInt(data.Number2))
 }
 
 
@@ -36,7 +42,7 @@ rl.on('line', function(line) {
     handleInput();
 
 }).on('close', function() {
-    console.log("\n\nCalculating: " + data.Number1 + " " + data.Operation + " " + data.Number2 +" = " + addNumbers(data) + "\n\n")
+    console.log("\n\nCalculating: " + data.Number1 + " " + data.Operation + " " + data.Number2 +" = " + parseInput(data) + "\n\n")
     console.log('Exiting Program.');
     process.exit(0);
 });
