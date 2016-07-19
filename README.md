@@ -28,6 +28,7 @@
     - Basic UI and user flow concepts
     
 - Tic-Tac-Toe: Phase one implementation
-  - Large application construction.
-  - Context and state.
-  - Object definition and initialization.
+  - Phase 1: Basic two player solution with scoring.
+    - Large application construction.
+    - Context and state.
+    - Object definition and initialization.
